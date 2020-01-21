@@ -5,6 +5,8 @@ import store from './store';
 
 Vue.config.productionTip = false;
 
+require('@/assets/sass/_base.scss');
+
 new Vue({
   router,
   store,
