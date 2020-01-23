@@ -1,8 +1,15 @@
 <template>
   <div>
     <nav>
-      <li>Log In</li>
-      <li>Sign Up</li>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/log-in">Log In</router-link>
+      </li>
+      <li>
+        <router-link to="/sign-up">Sign Up</router-link>
+      </li>
     </nav>
   </div>
 </template>
@@ -11,14 +18,18 @@
 <style lang="scss" scoped>
 nav {
   padding: 1.5rem 5%;
-  background: #406e8e;
-  color: #fff;
+
   display: flex;
   justify-content: flex-end;
 
   li {
     &:not(:last-child) {
       margin-right: 2rem;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
     }
   }
 }

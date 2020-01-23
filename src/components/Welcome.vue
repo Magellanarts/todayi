@@ -86,15 +86,9 @@ export default {
   position: relative;
 }
 
-h1 {
-  font-size: 6rem;
-  color: #8ea8c3;
-  margin-bottom: 5rem;
-}
-
 .photoPlaceholder {
   border: 1px dashed #8ea8c3;
-  width: 300px;
+  width: 280px;
   height: 80px;
   margin: auto;
   border-radius: 4px;
@@ -127,7 +121,11 @@ input {
   color: #8ea8c3;
   font-size: 1.25rem;
   border-bottom: 1px dashed #8ea8c3;
-  width: 400px;
+  width: 280px;
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
+  }
 
   &::placeholder {
     opacity: 0;

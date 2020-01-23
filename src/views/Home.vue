@@ -20,7 +20,6 @@ export default {
 #home {
   padding: 20px;
   text-align: center;
-  background: #406e8e;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
