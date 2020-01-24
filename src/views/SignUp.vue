@@ -3,19 +3,19 @@
     <h1>Sign up for today,i</h1>
     <form class="c-std-form" @submit.prevent="signUpSubmit" novalidate>
       <fieldset>
-        <input type="text" v-model="firstName" placeholder="First name" />
+        <input type="text" v-model="firstName" placeholder="First name*" />
       </fieldset>
 
       <fieldset>
-        <input type="text" v-model="lastName" placeholder="Last Name" />
+        <input type="text" v-model="lastName" placeholder="Last Name*" />
       </fieldset>
 
       <fieldset>
-        <input type="email" v-model="email" placeholder="Email" />
+        <input type="email" v-model="email" placeholder="Email*" />
       </fieldset>
 
       <fieldset>
-        <input type="password" v-model="password" placeholder="Password" />
+        <input type="password" v-model="password" placeholder="Password*" />
       </fieldset>
 
       <button type="submit">Submit</button>
