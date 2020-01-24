@@ -61,7 +61,7 @@ export default {
       reader.readAsDataURL(upload.files[0]);
     },
     handleSave() {
-      console.log('hello');
+
     },
   },
   computed: {
