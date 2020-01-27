@@ -166,3 +166,34 @@ h1 {
     margin-bottom: 5rem;
   }
 }
+
+.c-std-form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+.c-std-form {
+  font-family: 'Crete Round', serif;
+  fieldset {
+    margin-bottom: 2rem;
+
+    input[type='text'],
+    input[type='email'],
+    input[type='password'] {
+      width: 300px;
+      background: none;
+      border: none;
+      -webkit-appearance: none;
+      border-bottom: 1px dashed #8ea8c3;
+      outline: none;
+      color: #fff;
+      font-size: 1rem;
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+}

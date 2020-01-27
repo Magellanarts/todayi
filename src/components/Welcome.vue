@@ -4,7 +4,7 @@
       <h1>today,i</h1>
 
       <form novalidate @submit.prevent>
-        <input type="text" v-model="todayText" placeholder="today,i" autofocus />
+        <input type="text" v-model="todayText" placeholder="What did you do today?" autofocus />
         <div class="date">{{ curDate }}</div>
 
         <div
@@ -120,6 +120,7 @@ input {
   background: none;
   color: #8ea8c3;
   font-size: 1.25rem;
+  transition: .2s linear;
   border-bottom: 1px dashed #8ea8c3;
   width: 280px;
 
@@ -128,8 +129,10 @@ input {
   }
 
   &::placeholder {
-    opacity: 0;
+    color: rgba(#8ea8c3, .6);
+    text-align: center;
   }
+
 
   &[type='file'] {
     display: none;
