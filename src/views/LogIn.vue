@@ -16,7 +16,7 @@
 
     <div v-if="message" class="message">{{ message }}</div>
 
-    <loading v-if="waiting" />
+    <loading :show="showLoader" />
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
         password: '',
       },
       message: '',
-      waiting: false,
+      showLoader: false,
     };
   },
   components: {
@@ -54,9 +54,9 @@ export default {
         this.message = 'Email is not allowed to be empty';
         return;
       }
-      this.waiting = true;
+      this.showLoader = true;
       if (!this.message) this.message = await this.registerUser(this.user);
-      this.waiting = false;
+      this.showLoader = false;
       if (this.message === 'success') router.push({ name: 'home' });
     },
   },

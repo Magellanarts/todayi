@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "allowJs": true,
     "baseUrl": ".",
     "types": ["webpack-env", "jest"],
     "paths": {
@@ -23,7 +24,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/store/index.js"
+    "src/store/index.js", "src/store/auth/auth.js", "src/store/auth/mutations.js", "src/store/auth/actions.js", "src/main.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -4,7 +4,12 @@
       <h1>today,i</h1>
 
       <form novalidate @submit.prevent>
-        <input type="text" v-model="todayText" placeholder="What did you do today?" autofocus />
+        <input type="text"
+          v-model="todayText"
+          placeholder="What did you do today?"
+          autofocus
+          autocomplete="off"
+        />
         <div class="date">{{ curDate }}</div>
 
         <div

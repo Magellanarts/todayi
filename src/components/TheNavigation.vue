@@ -29,7 +29,7 @@ export default {
     }),
   },
   computed: mapState({
-    signedIn: state => state.signedIn,
+    signedIn: state => state.auth.signedIn,
   }),
 };
 </script>
