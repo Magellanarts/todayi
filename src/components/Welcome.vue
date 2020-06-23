@@ -14,7 +14,7 @@
         <div class="date">{{ curDate }}</div>
 
         <div
-          class="photoPlaceholder"
+          class="photoPlaceholder rounded"
           :class="{ fullSize : entry.photoUploaded }"
           @click="triggerUploadDialog"
         >
@@ -31,7 +31,7 @@
         />
 
         <button
-          class="inactive save"
+          class="inactive save rounded"
           :class="{active : entry.photoUploaded || entry.entryText}"
           type="submit"
           :disabled="entry.photoUploaded || entry.entryText ? false : true"
@@ -123,7 +123,7 @@ export default {
   width: 280px;
   height: 80px;
   margin: auto;
-  border-radius: 4px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +181,7 @@ input {
 
 .save {
   font-size: 0.825rem;
-  border-radius: 4px;
+
   color: #8ea8c3;
   border: 1px dashed #8ea8c3;
   background: none;
