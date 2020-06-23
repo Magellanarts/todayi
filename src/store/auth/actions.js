@@ -5,10 +5,11 @@ import {
   LOGOUT_USER,
   AUTH_SUCCESS,
   LOGOUT,
+  SAVE_ENTRY,
 
 } from '@/store/types';
 
-require('dotenv').config();
+// require('dotenv').config();
 
 export default {
   [REGISTER_USER]: ({ commit, dispatch }, user) => new Promise((resolve, reject) => {
@@ -32,6 +33,7 @@ export default {
   }),
   [LOGIN_USER]: ({ commit }, user) => new Promise((resolve, reject) => {
     // submit to server to log in user
+
     axios
       .post(`${process.env.VUE_APP_SERVER_URL}auth/login`, {
         email: user.email,
@@ -58,4 +60,22 @@ export default {
     commit(LOGOUT);
     resolve();
   }),
+  [SAVE_ENTRY]: ({ commit }, entry) => new Promise((resolve) => {
+    // send entry to server
+    axios
+      .post(`${process.env.VUE_APP_SERVER_URL}entries/save-entry`, entry,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+      .then((response) => {
+        // entry saved
+
+      })
+      .catch((error) => {
+        resolve(error.response.data);
+      });
+  }),
+
 };

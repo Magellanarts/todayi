@@ -8,6 +8,7 @@ Vue.config.productionTip = false;
 /**  import base styles */
 require('@/assets/sass/_base.scss');
 
+
 /**  start up functions */
 require('@/startup.js');
 
